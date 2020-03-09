@@ -118,7 +118,7 @@ router.delete("/delete/:id",passport.authenticate("jwt",{session:false}),(req,re
     // {_id:req.params.id}
     mongoHelper.deleteOneById("test2",req.params.id).then(profile_delet => {
         profile_delet.save().then(profile_delet => res.json(profile_delet))
-        // res.json('删除成功')
+        // res.json('删除成功') 
     })
     .catch(err => res.status(404).json("删除失败"));
 })
