@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
 // Create Schema
 const ProfileSchema = new Schema({
   type: {
@@ -29,5 +28,10 @@ const ProfileSchema = new Schema({
     default: Date.now
   }
 });
+// var Profile = mongoose.model('profile', ProfileSchema);
+
+// module.exports = {
+//   Profile: Profile
+// };
 
 module.exports = Profile = mongoose.model('profile', ProfileSchema);

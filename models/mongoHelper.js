@@ -151,7 +151,7 @@ function updateOne(collection,condition,update){
 function updateOneById(collection,id,update){
     return new Promise((resolve,reject) => {
         _connect().then(dbClient => {
-            dbClient.collection(collection).updateOne({_id:mongodb.ObjectId(id)},update,(err,data) => {
+            dbClient.collection(collection).updateOne({_id:mongodb.ObjectId(id)},{$set:update},(err,data) => {
                 if(!err){
                     resolve(data);
                     return;
@@ -171,7 +171,7 @@ function updateOneById(collection,id,update){
 function updateOne(collection,condition,update){
     return new Promise((resolve,reject) => {
         _connect().then(dbClient => {
-            dbClient.collection(collection).updateMany(condition,update,(err,data) => {
+            dbClient.collection(collection).updateMany(condition,{$set:update},(err,data) => {
                 if(!err){
                     resolve(data);
                     return;
