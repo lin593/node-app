@@ -6,7 +6,7 @@
 
 文档开发解说请前往掘金中查看  https://juejin.im/post/5e202fbff265da3e0163eb09
 
-请大家记得给个star，后期继续优化，融入更多的技术点，谢谢支持！
+后期继续优化，融入更多的技术点，谢谢支持！
 
  
 The development of management system based on node + Vue
